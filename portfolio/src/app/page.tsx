@@ -8,7 +8,7 @@ export default function Home() {
             <h1>HELLO THERE</h1>
             <span className="waving_hand block">👋</span>
           </div>
-          <h2>I'm Ray Haddad</h2>
+          <h2>I&apos;m Ray Haddad</h2>
           <h2>Full Stack Developer</h2>
         </div>
         <div className="basis-[250px]">
