@@ -17,6 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <meta property="og:title" content="Ray Haddad" />
+      <meta property="og:description" content="Full Stack Developer" />
+      {/* <meta property="og:image" content="URL of Your Image"/> */}
+      <meta property="og:url" content="rayhaddad.xyz" />
+      <title>Ray Haddad</title>
+
       <body className="overflow-y-auto">
         <Navbar />
         <main className="min-h-[calc(100vh-100px)]">{children}</main>

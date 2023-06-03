@@ -3,7 +3,7 @@ export default function Home() {
   return (
     <section>
       <section className="flex justify-around items-center pt-[100px]">
-        <div className="text-4xl flex flex-col gap-7">
+        <div className="sm:text-4xl text-md flex flex-col gap-7">
           <div className="flex gap-2">
             <h1>HELLO THERE</h1>
             <span className="waving_hand block">👋</span>
