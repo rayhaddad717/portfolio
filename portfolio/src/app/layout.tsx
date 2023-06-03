@@ -21,6 +21,7 @@ export default function RootLayout({
       <meta property="og:description" content="Full Stack Developer" />
       {/* <meta property="og:image" content="URL of Your Image"/> */}
       <meta property="og:url" content="rayhaddad.xyz" />
+      <meta name="theme-color" content="#070707" />
       <title>Ray Haddad</title>
 
       <body className="overflow-y-auto">
