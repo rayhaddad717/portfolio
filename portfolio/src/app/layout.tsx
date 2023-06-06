@@ -35,6 +35,7 @@ export default function RootLayout({
         name="twitter:image"
         content="https://media.licdn.com/dms/image/C5603AQEKXNgClmog2w/profile-displayphoto-shrink_800_800/0/1614590546241?e=2147483647&v=beta&t=cSdGOjcXR8fUxdRhMqdiCtEngMMejCcsfIC0FXqnpd8"
       />
+      <link rel="icon" type="image/x-icon" href="/icons/code-solid.svg"></link>
       <title>Ray Haddad</title>
 
       <body className="overflow-y-auto">

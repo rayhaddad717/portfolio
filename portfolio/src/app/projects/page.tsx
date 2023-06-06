@@ -1,8 +1,8 @@
 export default function Projects() {
   const projects = [
     {
-      title: "CMS",
-      img: "/icons/cms.svg",
+      title: "Ecom",
+      img: "/icons/code-solid.svg",
       description: "Ecommerce Website",
     },
     {
