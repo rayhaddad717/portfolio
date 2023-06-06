@@ -22,6 +22,10 @@ export default function RootLayout({
       {/* <meta property="og:image" content="URL of Your Image"/> */}
       <meta property="og:url" content="rayhaddad.xyz" />
       <meta name="theme-color" content="#070707" />
+      <meta
+        name="google-site-verification"
+        content="6wLNrLsUxaQfuiwLTzD2q5QcwE9U13Fq0MeLzahIr94"
+      />
       <title>Ray Haddad</title>
 
       <body className="overflow-y-auto">
