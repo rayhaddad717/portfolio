@@ -27,4 +27,22 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
+  /* For Firefox */
+  scrollbar-color: #000000 #f1f1f1; /* Black color for thumb, light gray for track */
+  scrollbar-width: thin;
+}
+/* For Webkit browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000; /* Black color */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Light gray color */
+  border-radius: 5px;
 }
