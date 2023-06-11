@@ -1,11 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import "~bootstrap/dist/css/bootstrap.min.css";
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --palette-c1: #363753;
+  --palette-c2: #dfe3ee;
+  --palette-c3: #fefefe;
+  --palette-c4: #5cd2c6;
+
+  --page-background-color: #111827;
+  --text-color: white;
+  --link-color: #81cfe0;
+  --border-color: #81cfe0;
+  --nav-underline-color: #81cfe0;
+  --footer-link-color: #81cfe0;
+  --footer-background-color: #81cfe020;
+  --header-h1-gradient: linear-gradient(
+    to left,
+    rgb(80, 201, 195),
+    rgb(150, 222, 218)
+  );
+  --frontpage-post-hover-color: rgba(228, 241, 254, 0.4);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,7 +37,7 @@
 body {
   /* color: rgb(var(--foreground-rgb)); */
   color: #fff;
-  background: #070707;
+  background: var(--page-background-color);
   padding: 0 1rem;
   /* background: linear-gradient(
       to bottom,
@@ -31,6 +49,21 @@ body {
   scrollbar-color: #000000 #f1f1f1; /* Black color for thumb, light gray for track */
   scrollbar-width: thin;
 }
+body.light {
+  --link-color: #2574a9;
+  --text-color: black;
+  --page-background-color: white;
+  --nav-underline-color: #663399;
+  --border-color: black;
+  --footer-link-color: #663399;
+  --footer-background-color: #66339906;
+  --header-h1-gradient: linear-gradient(
+    to right,
+    rgb(157, 80, 187),
+    rgb(110, 72, 170)
+  );
+  --frontpage-post-hover-color: rgb(237, 233, 254);
+}
 /* For Webkit browsers (Chrome, Safari, etc.) */
 ::-webkit-scrollbar {
   width: 4px;
@@ -38,7 +71,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #000000; /* Black color */
+  background-color: var(--palette-c2); /* Black color */
   border-radius: 5px;
 }
 

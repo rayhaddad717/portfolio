@@ -1,16 +1,67 @@
 import Link from "next/link";
 import { useMemo } from "react";
-
+import "./Projects.css";
+export interface IProject {
+  title: string;
+  img: string;
+  description: string;
+  techs?: string[];
+  link?: string;
+  github_link?: string;
+}
 export default function Projects() {
-  const projects = useMemo(
+  const projects: IProject[] = useMemo(
     () => [
+      {
+        title: "Yelpcamp",
+        img: "/project-images/yelpcamp.png",
+        description: "Website that has campgrounds",
+        techs: ["Express", "NodeJS", "HTML", "CSS"],
+        link: "https://yelpcamp.rayhaddad.xyz",
+        github_link: "https://github.com/rayhaddad717/yelpcamp",
+      },
       {
         title: "Ecom",
         img: "/icons/code-solid.svg",
         description: "Ecommerce Website",
       },
       {
-        title: "Yelpcamp",
+        title: "Wine Predictor",
+        img: "/icons/code-solid.svg",
+        description: "NODEJS",
+      },
+      {
+        title: "Game Library",
+        img: "/icons/code-solid.svg",
+        description: "NODEJS",
+      },
+      {
+        title: "Deliveroo Clone",
+        img: "/icons/code-solid.svg",
+        description: "NODEJS",
+      },
+      {
+        title: "Signal Clone",
+        img: "/icons/code-solid.svg",
+        description: "NODEJS",
+      },
+      {
+        title: "Silent Reads",
+        img: "/icons/code-solid.svg",
+        description: "NODEJS",
+      },
+      {
+        title: "Yahtzee",
+        img: "/icons/code-solid.svg",
+        description: "NODEJS",
+      },
+      {
+        title: "Lights Out",
+        img: "/icons/code-solid.svg",
+        description: "NODEJS",
+      },
+      {
+        title: "Dad Jokes",
         img: "/icons/code-solid.svg",
         description: "NODEJS",
       },
@@ -34,33 +85,60 @@ export default function Projects() {
     ],
     []
   );
+  // return <ProjectsList projects={projects} />;
   return (
     <section className="mt-5">
       <div>
         <h1 className="text-4xl text-center mb-5">Projects</h1>
         <h4 className="text-center text-gray-500">Some of my projects</h4>
-        <ul className="py-10 w-[100%] flex justify-center gap-8 sm:flex-row flex-col">
+        <ul className="py-10 w-[100%] flex justify-center gap-8 sm:flex-row flex-col flex-wrap">
           {projects.map((project, index) => (
             <li
               key={index}
-              className="sm:w-fit sm:flex-grow-0 flex-grow-1 basis-[200px] border-2  border-gray-400 flex flex-col items-center justify-center p-6 rounded-md hover:scale-110 transition-transform duration-500 ease-in-out"
+              className="flex-grow-0 basis-[400px] border-1  border-gray-400 flex flex-col items-center justify-center  rounded-md overflow-hidden"
             >
-              <h4 className="text-xl font-bold mb-4">{project.title}</h4>
-              <img
-                className="w-32 h-32  rounded-full mb-4"
-                src={project.img}
-                alt={project.title}
-              />
-              <p className="text-gray-600 mb-5">{project.description}</p>
-              <div className="flex items-center gap-3 my-2">
+              <div className="border-0 card flex-[2] relative mb-4">
+                <div className="  hover:rgb(46 46 46 / 50%) w-full h-full absolute  flex-wrap top-0 left-0 justify-center items-center gap-2 hidden tech-chip">
+                  {project.techs?.map((tech, tech_index) => (
+                    <span
+                      className="rounded-r-lg rounded-l-lg bg-[var(--text-color)] w-fit h-fit p-1 cursor-pointer text-black "
+                      key={tech_index}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
                 <img
-                  className="w-[24px] cursor-pointer"
-                  src="/icons/github.svg"
-                />{" "}
-                <img
-                  className="w-[24px] cursor-pointer"
-                  src="/icons/link-solid.svg"
+                  className=" object-contain   transition-transform duration-500 ease-in-out"
+                  src={project.img}
+                  alt={project.title}
                 />
+              </div>
+              <div className="flex-1 flex flex-col w-full px-4 pb-2">
+                <h4 className="text-xl font-bold mb-4 text-start text-[var(--link-color)]">
+                  {project.title}
+                </h4>
+                <p className="text-gray-600 mb-5">{project.description}</p>
+                <div className="flex items-center justify-center gap-3 my-2">
+                  <Link
+                    href={project.github_link || "#"}
+                    className="hover:-translate-y-1 transition-all ease-in-out duration-200 "
+                  >
+                    <img
+                      className="w-[24px] cursor-pointer "
+                      src="/icons/github.svg"
+                    />
+                  </Link>
+                  <Link
+                    href={project.link || "#"}
+                    className="hover:-translate-y-1 transition-all ease-in-out duration-200 "
+                  >
+                    <img
+                      className="w-[24px] cursor-pointer"
+                      src="/icons/link-solid.svg"
+                    />
+                  </Link>
+                </div>
               </div>
             </li>
           ))}

@@ -65,10 +65,14 @@ export default function About() {
   );
   return (
     <section>
-      <h1 className="text-center sm:text-4xl text-lg mb-5">About Me</h1>
+      <h1 className="text-center sm:text-4xl text-lg mb-5">
+        About <span className="text-[var(--link-color)]">Me</span>
+      </h1>
       <div className="flex items-center justify-center my-10">
         <div className="flex flex-col items-center gap-[1rem]">
-          <h3 className="sm:text-3xl text-lg">Who Am I ?</h3>
+          <h3 className="sm:text-3xl text-lg">
+            <span className="text-[var(--link-color)]">Who</span> Am I ?
+          </h3>
           <p>
             Hello There, I am Ray Haddad. I am currently a software engineering
             student in my 4th year.
@@ -77,14 +81,17 @@ export default function About() {
         </div>
       </div>
       <div className="flex flex-col items-center gap-[2rem] my-10 w-[80%] mx-[auto]">
-        <h3 className="sm:text-3xl text-center text-lg">Skillset</h3>
+        <h3 className="sm:text-3xl text-center text-lg">
+          Proffesional{" "}
+          <span className="text-[var(--link-color)]">Skillset</span>
+        </h3>
         <ul className="flex flex-wrap gap-[2rem] justify-evenly">
           {skills.map(
             (skill: { title: string; icon: IconType }, index: number) => (
               <li
                 title={skill.title}
                 key={index}
-                className="my-4 text-7xl flex items-center justify-center py-10 px-14  border-[2px] rounded-md hover:scale-110 transition-transform duration-500 ease-in-out"
+                className="cursor-pointer my-4 text-7xl flex items-center justify-center py-10 px-14  border-[2px] rounded-md hover:scale-110 transition-transform duration-500 ease-in-out"
               >
                 {skill.icon({ title: skill.title })}
               </li>
@@ -93,14 +100,17 @@ export default function About() {
         </ul>
       </div>
       <div className="flex flex-col items-center gap-[2rem] mt-16 mb-20">
-        <h3 className="sm:text-3xl text-center text-lg">Technologies</h3>
+        <h3 className="sm:text-3xl text-center text-lg">
+          <span className="text-[var(--link-color)]">Technologies </span>
+          Used
+        </h3>
         <ul className="flex flex-wrap gap-[2rem] justify-evenly">
           {techs.map(
             (tech: { title: string; icon: IconType }, index: number) => (
               <li
                 title={tech.title}
                 key={index}
-                className="my-4 text-7xl flex items-center justify-center py-10 px-14  border-[2px] rounded-md hover:scale-110 transition-transform duration-500 ease-in-out"
+                className="cursor-pointer my-4 text-7xl flex items-center justify-center py-10 px-14  border-[2px] rounded-md hover:scale-110 transition-transform duration-500 ease-in-out"
               >
                 {tech.icon({ title: tech.title })}
               </li>

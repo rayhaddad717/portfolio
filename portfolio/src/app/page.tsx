@@ -9,7 +9,7 @@ export default function Home() {
             <span className="waving_hand block">👋</span>
           </div>
           <h2>I&apos;m Ray Haddad</h2>
-          <h2>Full Stack Developer</h2>
+          <h2 className="text-[var(--link-color)]">Full Stack Developer</h2>
         </div>
         <div className="basis-[250px]">
           <img className="max-w-[250px]" src="/icons/developer.svg" />
