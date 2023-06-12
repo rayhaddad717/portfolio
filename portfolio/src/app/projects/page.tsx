@@ -21,6 +21,48 @@ export default function Projects() {
         github_link: "https://github.com/rayhaddad717/yelpcamp",
       },
       {
+        title: "Silent Reads",
+        img: "/project-images/silentreads.png",
+        description: "NODEJS",
+        techs: ["HTML", "CSS", "JS", "API", "Firebase"],
+      },
+      {
+        title: "Yahtzee",
+        img: "/project-images/yahtzee.png",
+        description: "NODEJS",
+        techs: ["React", "Firebase"],
+        link: "https://myyahtzee.web.app/",
+      },
+      {
+        title: "Lights Out",
+        img: "/project-images/lightsout.png",
+        description: "NODEJS",
+        techs: ["React", "Firebase"],
+        link: "https://mylightsout.web.app/",
+      },
+      {
+        title: "Dad Jokes",
+        img: "/project-images/cheezjokes.png",
+        description: "NODEJS",
+        techs: ["React", "Firebase"],
+        link: "https://cheezjokes.web.app/",
+      },
+      {
+        title: "High Low",
+        img: "/project-images/highlow.png",
+        description: "NODEJS",
+        techs: ["React", "Firebase"],
+        link: "https://myhighlow.web.app/",
+      },
+      {
+        title: "Game Library",
+        img: "/project-images/videogames.png",
+        description: "NODEJS",
+        techs: ["Angular", "API", "Firebase"],
+        link: "https://raysvideogamelibrary.web.app/",
+      },
+
+      {
         title: "Ecom",
         img: "/icons/code-solid.svg",
         description: "Ecommerce Website",
@@ -30,11 +72,7 @@ export default function Projects() {
         img: "/icons/code-solid.svg",
         description: "NODEJS",
       },
-      {
-        title: "Game Library",
-        img: "/icons/code-solid.svg",
-        description: "NODEJS",
-      },
+
       {
         title: "Deliveroo Clone",
         img: "/icons/code-solid.svg",
@@ -42,26 +80,6 @@ export default function Projects() {
       },
       {
         title: "Signal Clone",
-        img: "/icons/code-solid.svg",
-        description: "NODEJS",
-      },
-      {
-        title: "Silent Reads",
-        img: "/icons/code-solid.svg",
-        description: "NODEJS",
-      },
-      {
-        title: "Yahtzee",
-        img: "/icons/code-solid.svg",
-        description: "NODEJS",
-      },
-      {
-        title: "Lights Out",
-        img: "/icons/code-solid.svg",
-        description: "NODEJS",
-      },
-      {
-        title: "Dad Jokes",
         img: "/icons/code-solid.svg",
         description: "NODEJS",
       },
