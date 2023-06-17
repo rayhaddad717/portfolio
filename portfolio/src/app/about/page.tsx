@@ -82,8 +82,7 @@ export default function About() {
       </div>
       <div className="flex flex-col items-center gap-[2rem] my-10 w-[80%] mx-[auto]">
         <h3 className="sm:text-3xl text-center text-lg">
-          Proffesional{" "}
-          <span className="text-[var(--link-color)]">Skillset</span>
+          Profesional <span className="text-[var(--link-color)]">Skillset</span>
         </h3>
         <ul className="flex flex-wrap gap-[2rem] justify-evenly">
           {skills.map(

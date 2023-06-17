@@ -13,6 +13,7 @@
   --page-background-color: #111827;
   --text-color: white;
   --link-color: #81cfe0;
+  --scrollbar-color: #81cfe0;
   --border-color: #81cfe0;
   --nav-underline-color: #81cfe0;
   --footer-link-color: #81cfe0;
@@ -70,11 +71,12 @@ body.light {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--palette-c2); /* Black color */
+  background-color: var(--scrollbar-color); /* Black color */
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #f1f1f1; /* Light gray color */
+  /* background-color: #f1f1f1; Light gray color */
+  background-color: var(--page-background-color); /* Light gray color */
   border-radius: 5px;
 }

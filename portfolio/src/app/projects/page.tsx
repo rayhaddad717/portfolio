@@ -107,7 +107,9 @@ export default function Projects() {
   return (
     <section className="mt-5">
       <div>
-        <h1 className="text-4xl text-center mb-5">Projects</h1>
+        <h1 className="text-4xl text-center mb-5 text-[var(--link-color)]">
+          Projects
+        </h1>
         <h4 className="text-center text-gray-500">Some of my projects</h4>
         <ul className="py-10 w-[100%] flex justify-center gap-8 sm:flex-row flex-col flex-wrap">
           {projects.map((project, index) => (
