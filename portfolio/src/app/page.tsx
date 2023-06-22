@@ -1,6 +1,8 @@
-"use client";
+// "use client";
 import Type from "@/components/Type";
 import "./home.css";
+import ContactMe from "@/components/ContactMe";
+import fs from "fs";
 export default function Home() {
   return (
     <section>
@@ -19,6 +21,8 @@ export default function Home() {
           <img className="max-w-[250px]" src="/icons/developer.svg" />
         </div>
       </section>
+
+      <ContactMe />
     </section>
   );
 }

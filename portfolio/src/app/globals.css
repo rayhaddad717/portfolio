@@ -80,3 +80,6 @@ body.light {
   background-color: var(--page-background-color); /* Light gray color */
   border-radius: 5px;
 }
+* {
+  box-sizing: border-box;
+}
