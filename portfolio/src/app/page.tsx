@@ -5,8 +5,8 @@ import ContactMe from "@/components/ContactMe";
 import fs from "fs";
 export default function Home() {
   return (
-    <section>
-      <section className="flex justify-around items-center pt-[100px]">
+    <section className="w-[70%] m-auto">
+      <section className="flex justify-between items-center pt-[100px]">
         <div className="sm:text-4xl text-md flex flex-col gap-7 basis-[400px]">
           <div className="flex gap-2">
             <h1>HELLO THERE</h1>

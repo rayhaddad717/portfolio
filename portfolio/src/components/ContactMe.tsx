@@ -29,7 +29,7 @@ export default function ContactMe() {
     }
     setErrors(newErrors);
     if (newErrors.length) {
-      setState("finished");
+      setState("");
       return;
     }
     axios
@@ -49,27 +49,29 @@ export default function ContactMe() {
           }, 700);
         }, 1500)
       )
-      .catch(() => {});
+      .catch(() => {
+        setState("");
+      });
   }
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col justify-center gap-[2rem] w-[600px] mr-auto ml-auto my-[6rem] max-w-[100%]"
+      className="flex flex-col justify-center gap-[2rem] w-full mr-auto ml-auto my-[6rem] max-w-[100%]"
     >
       <h1 className="text-center text-4xl">Contact Me</h1>
       <p className="text-gray-400 mr-auto ml-auto">
         Let&apos;s get this conversation started. Send me a message and we can
         get in touch as soon as possible!
       </p>
-      <div className="flex sm:flex-row flex-col sm:gap-0 gap-8  justify-between ">
-        <div className="flex flex-col gap-[0.5rem]">
+      <div className="flex sm:flex-row flex-col sm:gap-[20%] gap-8  justify-between ">
+        <div className="sm:w-[40%] flex-grow flex flex-col gap-[0.5rem]">
           <label htmlFor="firstName">
             First name <span className="text-[#ff0000]  text-sm">*</span>
           </label>
           <input
             value={form.fn}
             onChange={(e) => handleChange(e.target.value, "fn")}
-            className="text-black h-[2.5rem] p-[0.5rem] rounded-sm border-[#fff] focus:border-[var(--border-color)] border-[3px] outline-none"
+            className=" text-black sm:h-[3.5rem] sm:h-[3.5rem] h-[2.5rem] p-[0.5rem] rounded-sm border-[#fff] focus:border-[var(--border-color)] border-[3px] outline-none"
             id="firstName"
             placeholder="First name"
           />
@@ -77,7 +79,7 @@ export default function ContactMe() {
             <p className="text-[#ff0000] ml-auto text-sm">Required</p>
           ) : null}
         </div>
-        <div className="flex flex-col gap-[0.5rem]">
+        <div className="sm:w-[40%] flex-grow flex flex-col gap-[0.5rem]">
           <label htmlFor="lastName">
             Last name <span className="text-[#ff0000]  text-sm">*</span>
           </label>
@@ -85,7 +87,7 @@ export default function ContactMe() {
             value={form.ln}
             onChange={(e) => handleChange(e.target.value, "ln")}
             id="lastName"
-            className="text-black h-[2.5rem] p-[0.5rem] rounded-sm border-[#fff] focus:border-[var(--border-color)] border-[3px] outline-none"
+            className=" text-black sm:h-[3.5rem] h-[2.5rem] p-[0.5rem] rounded-sm border-[#fff] focus:border-[var(--border-color)] border-[3px] outline-none"
             placeholder="Last name"
           />
           {errors.filter((e) => e == "ln")?.length ? (
@@ -101,7 +103,7 @@ export default function ContactMe() {
           value={form.email}
           onChange={(e) => handleChange(e.target.value, "email")}
           id="workEmail"
-          className="text-black h-[2.5rem] p-[0.5rem] rounded-sm border-[#fff] focus:border-[var(--border-color)] border-[3px] outline-none"
+          className="text-black sm:h-[3.5rem] h-[2.5rem] p-[0.5rem] rounded-sm border-[#fff] focus:border-[var(--border-color)] border-[3px] outline-none"
           placeholder="Work email"
         />
         {errors.filter((e) => e == "email")?.length ? (
