@@ -55,9 +55,9 @@ export default function AboutMe() {
           </p>
           <div className="w-[1px] h-[80px] bg-[var(--color-green)]"></div>
           <img
-            className="w-[20px] h-[20px]"
-            src="svgs/facebook.svg"
-            alt="facebook"
+            className="w-[20px] h-[20px] filter-green"
+            src="icons/github.svg"
+            alt="gitub"
           />
           <Link href="https://www.instagram.com/rayhaddad11">
             <img

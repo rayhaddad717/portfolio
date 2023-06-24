@@ -15,7 +15,7 @@ export default function ContactMe() {
           <p className="text-[var(--text-primary)] inline">Project</p>
         </h2>
         <p className="text-[var(--color-gray)] text-[1rem]">
-          Let’s make something new, different and more meaningful or make thing
+          Let’s make something new, different and more meaningful or make things
           more visual or conceptual
         </p>
       </div>

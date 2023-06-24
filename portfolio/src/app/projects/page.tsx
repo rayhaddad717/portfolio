@@ -8,6 +8,7 @@ export interface IProject {
   techs?: string[];
   link?: string;
   github_link?: string;
+  stack: "Full Stack" | "Frontend" | "Mobile";
 }
 export default function Projects() {
   const projects: IProject[] = useMemo(
@@ -16,18 +17,20 @@ export default function Projects() {
         title: "Yelpcamp",
         img: "/project-images/yelpcamp.png",
         description:
-          "First FullStack project. Serves as a platform to view campgrounds across the country, add new campgrounds, review others. ",
-        techs: ["Express", "NodeJS", "HTML", "CSS"],
+          "First FullStack project. Serves as a platform to view campgrounds across the country, add new campgrounds, and review others. Implements sessions, authorization, authentication, image upload and more.",
+        techs: ["Express", "NodeJS", "EJS", "Cloudinary", "Redis"],
         link: "https://yelpcamp.rayhaddad.xyz",
         github_link: "https://github.com/rayhaddad717/yelpcamp",
+        stack: "Full Stack",
       },
       {
         title: "Silent Reads",
         img: "/project-images/silentreads.png",
         description:
-          "A book search engine, made with vanillas javascript using google search apis.",
+          "A book search engine, made with vanilla javascript using google search apis.",
         techs: ["HTML", "CSS", "JS", "API", "Firebase"],
         link: "https://silentreads.web.app/",
+        stack: "Frontend",
       },
       {
         title: "Yahtzee",
@@ -36,6 +39,7 @@ export default function Projects() {
         techs: ["React", "Firebase"],
         link: "https://myyahtzee.web.app/",
         github_link: "https://github.com/rayhaddad717/reactCourse.git",
+        stack: "Frontend",
       },
       {
         title: "Lights Out",
@@ -45,6 +49,7 @@ export default function Projects() {
         techs: ["React", "Firebase"],
         link: "https://mylightsout.web.app/",
         github_link: "https://github.com/rayhaddad717/reactCourse.git",
+        stack: "Frontend",
       },
       {
         title: "Dad Jokes",
@@ -54,14 +59,16 @@ export default function Projects() {
         techs: ["React", "Firebase"],
         link: "https://cheezjokes.web.app/",
         github_link: "https://github.com/rayhaddad717/reactCourse.git",
+        stack: "Frontend",
       },
       {
         title: "High Low",
         img: "/project-images/highlow.png",
-        description: "Typical High-Low card game.",
+        description: "Standard High-Low card game.",
         techs: ["React", "Firebase"],
         link: "https://myhighlow.web.app/",
         github_link: "https://github.com/rayhaddad717/reactCourse.git",
+        stack: "Frontend",
       },
       {
         title: "Game Library",
@@ -69,6 +76,7 @@ export default function Projects() {
         description: "Game library search engine built with external APIs.",
         techs: ["Angular", "API", "Firebase"],
         link: "https://raysvideogamelibrary.web.app/",
+        stack: "Frontend",
       },
 
       {
@@ -78,6 +86,7 @@ export default function Projects() {
           "Mobile App to predict the quality of a wine sample. Uses machine learning with python backend to predict the quality of a sample",
         github_link:
           "https://github.com/rayhaddad717/ml-wine-prediction-mobile.git",
+        stack: "Full Stack",
       },
 
       {
@@ -86,6 +95,7 @@ export default function Projects() {
         description:
           "Deliveroo mobile app clone built with React Native and Expo with Sanity as a CMS.",
         github_link: "https://github.com/rayhaddad717/Deliveroo-clone.git",
+        stack: "Mobile",
       },
       {
         title: "Signal Clone",
@@ -93,6 +103,7 @@ export default function Projects() {
         description:
           "Signal mobile app clone built with React Native, Expo, with Firebase authentication and messaging.",
         github_link: "https://github.com/rayhaddad717/Signal.git",
+        stack: "Mobile",
       },
     ],
     []
@@ -128,9 +139,12 @@ export default function Projects() {
           {projects.map((project, index) => (
             <li
               key={index}
-              className="sm:mx-0 mx-[2rem] flex-grow-0 sm:basis-[400px] border-[2px]  border-[var(--color-green)] sm:hover:-translate-x-1 sm:hover:-translate-y-1 duration-100 ease-in-out flex flex-col items-center justify-center  rounded-md overflow-hidden"
+              className="relative sm:mx-0 mx-[2rem] flex-grow-0 sm:basis-[400px] border-[2px]  border-[var(--color-green)] sm:hover:-translate-x-1 sm:hover:-translate-y-1 duration-100 ease-in-out flex flex-col items-center justify-center  rounded-md overflow-hidden"
             >
-              <div className="border-0 card flex-[2] relative mb-4">
+              <div className="w-[10rem] text-center z-50 absolute top-0 left-0 -rotate-45 -translate-x-[2.5rem] translate-y-[1.5rem] text-[var(--color-white)] bg-[var(--color-green)]">
+                {project.stack}
+              </div>
+              <div className="border-0 card flex-[2] relative mb-4 max-h-[180px]">
                 <div className="  hover:rgb(46 46 46 / 50%) w-full h-full absolute  flex-wrap top-0 left-0 justify-center items-center gap-2 hidden tech-chip">
                   {project.techs?.map((tech, tech_index) => (
                     <span
@@ -147,13 +161,15 @@ export default function Projects() {
                   alt={project.title}
                 />
               </div>
-              <div className="flex-1 flex flex-col w-full px-4 pb-2">
-                <h4 className="text-xl font-bold mb-4 text-start text-[var(--link-color)]">
-                  {project.title}
-                </h4>
-                <p className="text-[var(--text-color)] mb-5">
-                  {project.description}
-                </p>
+              <div className="flex-1 flex flex-col w-full px-4 pb-2 justify-between">
+                <div className="flex flex-col">
+                  <h4 className="text-xl font-bold mb-4 text-start text-[var(--link-color)]">
+                    {project.title}
+                  </h4>
+                  <p className="text-[var(--text-color)] mb-5">
+                    {project.description}
+                  </p>
+                </div>
                 <div className="flex items-center justify-center gap-3 my-2">
                   {project.github_link ? (
                     <Link

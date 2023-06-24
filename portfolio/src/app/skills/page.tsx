@@ -26,6 +26,9 @@ import {
   SiHtml5,
   SiCss3,
   SiSequelize,
+  SiTailwindcss,
+  SiUbuntu,
+  SiDigitalocean,
 } from "react-icons/si";
 import { TbBrandSocketIo } from "react-icons/tb";
 export default function About() {
@@ -36,6 +39,7 @@ export default function About() {
       { title: "PostgreSQL", icon: SiPostgresql },
       { title: "HTML5", icon: SiHtml5 },
       { title: "CSS3", icon: SiCss3 },
+      { title: "Tailwind", icon: SiTailwindcss },
       { title: "SocketIO", icon: TbBrandSocketIo },
       { title: "Javascript", icon: DiJavascript1 },
       { title: "Typescript", icon: SiTypescript },
@@ -61,6 +65,8 @@ export default function About() {
       { title: "Microsoft Azure", icon: SiMicrosoftazure },
       { title: "Postman", icon: SiPostman },
       { title: "NPM", icon: DiNpm },
+      { title: "Ubuntu", icon: SiUbuntu },
+      { title: "Digital Ocean", icon: SiDigitalocean },
     ],
     []
   );
@@ -93,10 +99,9 @@ export default function About() {
           )}
         </ul>
       </div>
-      <div className="flex flex-col items-center gap-[2rem] mt-16 mb-20">
-        <h3 className="sm:text-3xl text-center text-lg">
-          <span className="text-[var(--color-green)]">Technologies </span>
-          Used
+      <div className="flex flex-col items-center gap-[2rem] mt-16 mb-20 px-[var(--page-padding)]">
+        <h3 className="text-3xl text-center ">
+          <span className="text-[var(--color-green)]">Technologies</span> Used
         </h3>
         <p>Tools I have used along my coding journey.</p>
         <ul className="flex flex-wrap gap-[2rem] justify-evenly">
