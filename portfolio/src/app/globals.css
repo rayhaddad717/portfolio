@@ -64,3 +64,6 @@ body {
   background-color: var(--color-gray); /* Light gray color */
   border-radius: 5px;
 }
+.break-word {
+  word-break: break-word;
+}

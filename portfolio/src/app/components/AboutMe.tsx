@@ -4,12 +4,12 @@ import Link from "next/link";
 export default function AboutMe() {
   return (
     <div className="mt-[9rem] px-[var(--page-padding)] flex flex-col gap-[4rem]">
-      <div className="upper flex justify-between relative sm:flex-row flex-col sm:gap-0 gap-[2rem]">
-        <div className="left flex flex-col gap-[1rem] sm:w-[50%] w-[90%]">
+      <div className="upper flex justify-between relative lg:flex-row flex-col lg:gap-0 gap-[2rem]">
+        <div className="left flex flex-col gap-[1rem] lg:w-[50%] w-[80%]">
           <h4 className="w-fit px-[5px] text-[var(--text-primary)] border-[var(--color-green)] border-[1px] rounded-3xl font-medium text-[20px]">
             Welcome
           </h4>
-          <h1 className="text-[50px] text-[var(--color-light-black)] sm:leading-[70px] leading-[53px] font-semibold">
+          <h1 className="sm:text-[50px] text-[40px] text-[var(--color-light-black)] sm:leading-[70px] leading-[53px] font-semibold">
             I have{" "}
             <span className="text-[var(--text-primary)]">Full Stack</span>{" "}
             Development Experience
@@ -40,13 +40,13 @@ export default function AboutMe() {
           </div>
         </div>
         <div className="right relative">
-          <div className="rounded-md sm:h-[350px] h-[80vw] sm:w-[350px] w-[80vw] bg-[var(--color-green)] relative">
+          <div className="rounded-md lg:h-[350px] h-[80vw] lg:w-[350px] w-[80vw] bg-[var(--color-green)] relative">
             <img
               src="images/me.png"
-              className="sm:w-[80%] w-[70vw]  absolute sm:left-[10%] left-[18px] bottom-0 z-20"
+              className="lg:w-[80%] w-[70vw]  absolute lg:left-[10%] left-[18px] bottom-0 z-20"
             />
           </div>
-          <div className="rounded-md absolute border-[4px] border-[var(--color-black)] sm:h-[350px] h-[80vw] sm:w-[350px] w-[80vw] left-[10%] top-[10%] z-10 sm:top-[52px] sm:left-[-52px]"></div>
+          <div className="rounded-md absolute border-[4px] border-[var(--color-black)] lg:h-[350px] h-[80vw] lg:w-[350px] w-[80vw] left-[10%] top-[10%] z-10 lg:top-[52px] lg:left-[-52px]"></div>
         </div>
 
         <div className="extreme-right absolute right-[-7%] flex flex-col gap-[32px] items-center">
@@ -75,30 +75,30 @@ export default function AboutMe() {
           </Link>
         </div>
       </div>
-      <ul className="lower my-16 flex justify-evenly w-full sm:gap-0 gap-[1rem]">
+      <ul className="lower my-16 flex justify-evenly w-full sm:gap-0 gap-[0.5rem]">
         <li className="flex flex-col justify-between ">
-          <h2 className="text-[var(--text-primary)] text-[23px] sm:text-[48px] font-semibold font-pop poppins">
+          <h2 className="w-min text-[var(--text-primary)] text-[23px] sm:text-[48px] font-semibold font-pop poppins">
             20+
           </h2>
-          <p className="poppins text-[15px] sm:text-[28px] text-[var(--color-black)]">
+          <p className="w-fit break-word poppins text-[15px] sm:text-[28px] text-[var(--color-black)]">
             Technologies
           </p>
         </li>
         <li className="w-[2px] h-[80px] mt-auto bg-[var(--color-green)]"></li>
         <li className="flex flex-col justify-between ">
-          <h2 className="text-[var(--text-primary)] text-[23px] sm:text-[48px] font-semibold font-pop poppins">
+          <h2 className="w-min text-[var(--text-primary)] text-[23px] sm:text-[48px] font-semibold font-pop poppins">
             10+
           </h2>
-          <p className="poppins text-[15px] sm:text-[28px] text-[var(--color-black)]">
+          <p className="w-fit break-word  poppins text-[15px] sm:text-[28px] text-[var(--color-black)]">
             Projects completed
           </p>
         </li>
         <li className="w-[2px] h-[80px] mt-auto bg-[var(--color-green)]"></li>
         <li className="flex flex-col justify-between ">
-          <h2 className="text-[var(--text-primary)] text-[23px] sm:text-[48px] font-semibold font-pop poppins">
+          <h2 className="w-min text-[var(--text-primary)] text-[23px] sm:text-[48px] font-semibold font-pop poppins">
             2+
           </h2>
-          <p className="poppins text-[15px] sm:text-[28px] text-[var(--color-black)]">
+          <p className="w-fit break-word  poppins text-[15px] sm:text-[28px] text-[var(--color-black)]">
             Years of experience
           </p>
         </li>

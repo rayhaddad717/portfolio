@@ -116,7 +116,7 @@ export default function Projects() {
   );
   // return <ProjectsList projects={projects} />;
   return (
-    <section className="sm:mt-5 mt-10 px-[var(--page-padding)]">
+    <section className="sm:mt-5 mt-16 px-[var(--page-padding)]">
       <div>
         <h1 className="text-4xl text-center mb-5 text-[var(--link-color)]">
           My <p className="text-[var(--text-primary)] inline">Projects</p>

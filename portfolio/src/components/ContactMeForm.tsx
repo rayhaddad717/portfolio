@@ -58,12 +58,12 @@ export default function ContactMeForm() {
       onSubmit={handleSubmit}
       className="flex flex-col justify-center gap-[2rem] w-full mr-auto ml-auto max-w-[100%]"
     >
-      <div className="flex sm:flex-row flex-col sm:gap-[20%] gap-8  justify-between ">
+      <div className="flex lg:flex-row flex-col lg:gap-[20%] gap-8  justify-between ">
         <div className="flex-grow flex flex-col gap-[0.5rem]">
           <input
             value={form.fn}
             onChange={(e) => handleChange(e.target.value, "fn")}
-            className=" text-black sm:h-[3.5rem]  h-[2.5rem] p-[0.5rem]  border-[var(--color-light-gray-2)] focus:border-[var(--border-color)] border-[1px] rounded-lg outline-none"
+            className=" text-black lg:h-[3.5rem]  h-[2.5rem] p-[0.5rem]  border-[var(--color-light-gray-2)] focus:border-[var(--border-color)] border-[1px] rounded-lg outline-none"
             id="firstName"
             placeholder="First name"
           />
@@ -76,7 +76,7 @@ export default function ContactMeForm() {
             value={form.ln}
             onChange={(e) => handleChange(e.target.value, "ln")}
             id="lastName"
-            className=" text-black sm:h-[3.5rem] h-[2.5rem] p-[0.5rem]  border-[var(--color-light-gray-2)] focus:border-[var(--border-color)] border-[1px] rounded-lg outline-none"
+            className=" text-black lg:h-[3.5rem] h-[2.5rem] p-[0.5rem]  border-[var(--color-light-gray-2)] focus:border-[var(--border-color)] border-[1px] rounded-lg outline-none"
             placeholder="Last name"
           />
           {errors.filter((e) => e == "ln")?.length ? (
@@ -89,7 +89,7 @@ export default function ContactMeForm() {
           value={form.email}
           onChange={(e) => handleChange(e.target.value, "email")}
           id="workEmail"
-          className="text-black sm:h-[3.5rem] h-[2.5rem] p-[0.5rem]  border-[var(--color-light-gray-2)] focus:border-[var(--border-color)] border-[1px] rounded-lg outline-none"
+          className="text-black lg:h-[3.5rem] h-[2.5rem] p-[0.5rem]  border-[var(--color-light-gray-2)] focus:border-[var(--border-color)] border-[1px] rounded-lg outline-none"
           placeholder="Work email"
         />
         {errors.filter((e) => e == "email")?.length ? (
