@@ -4,7 +4,7 @@ export default function ContactMe() {
   return (
     <div
       id="contactme"
-      className="mt-[4rem] flex flex-col items-center gap-[2rem]  px-[var(--page-padding)]"
+      className="pt-4 mt-[2rem] flex flex-col items-center gap-[2rem]  px-[var(--page-padding)]"
     >
       <div className="upper flex flex-col justify-between w-fit gap-[2rem]">
         <h4 className="ml-auto mr-auto w-fit px-[5px] text-[var(--text-primary)] border-[var(--color-green)] border-[1px] rounded-3xl font-medium text-[20px]">

@@ -1,0 +1,54 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap"); */
+
+* {
+  box-sizing: border-box;
+}
+
+button.custom-button {
+  --button-height: 48px;
+  height: fit-content;
+  overflow: hidden;
+  outline: none;
+  background-color: var(--color-green);
+  cursor: pointer;
+  position: relative;
+  transition: padding 0.3s;
+}
+
+.expand-icon {
+  --icon-size: 10px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-left: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(calc(var(--button-height) + 1px));
+  transition: transform 0.3s;
+}
+
+.expand-icon > svg {
+  height: var(--icon-size);
+  width: var(--icon-size);
+  transform: scale(1.5);
+  transition: transform 0.3s;
+}
+
+.expand-icon > svg.second {
+  display: none;
+  transform: scale(0) translateY(50px);
+  transition: transform 0.3s;
+}
+
+button.custom-button:hover,
+button.custom-button.loading {
+  padding-right: calc(25px + var(--button-height));
+}
+
+button.custom-button:hover > .expand-icon,
+button.custom-button.loading > .expand-icon {
+  transform: translateX(0);
+  transition: transform 0.3s 0.05s;
+}

@@ -40,6 +40,7 @@ export default function About() {
       { title: "Javascript", icon: DiJavascript1 },
       { title: "Typescript", icon: SiTypescript },
       { title: "React", icon: DiReact },
+      { title: "React Native", icon: DiReact },
       { title: "Python", icon: DiPython },
       { title: "Mongodb", icon: DiMongodb },
       { title: "Git", icon: DiGit },
@@ -65,31 +66,10 @@ export default function About() {
   );
   return (
     <section>
-      <h1 className="text-center sm:text-4xl text-lg mb-5">
-        About <span className="text-[var(--link-color)]">Me</span>
-      </h1>
-      <div className="flex items-center justify-center my-10">
-        <div className="flex flex-col items-center gap-[1rem]">
-          <h3 className="sm:text-3xl text-lg">
-            <span className="text-[var(--link-color)]">Who</span> Am I ?
-          </h3>
-          <p>
-            Hello There, I am Ray Haddad. I am currently a software engineering
-            student in my 4th year.
-          </p>
-          <p>
-            I am extremely passionate about everything related to coding. I do a
-            lot of self-learn and passion projects to push my limits.
-          </p>
-          <p>
-            During my free time I like to listen to music, go on long, calming
-            walks in nature, and go out with friends.
-          </p>
-        </div>
-      </div>
-      <div className="flex flex-col items-center gap-[2rem] my-10 w-[80%] mx-[auto]">
-        <h3 className="sm:text-3xl text-center text-lg">
-          Profesional <span className="text-[var(--link-color)]">Skillset</span>
+      <div className="flex flex-col items-center gap-[2rem] my-10 px-[var(--page-padding)] w-full mx-[auto]">
+        <h3 className="text-3xl text-center ">
+          Profesional{" "}
+          <span className="text-[var(--color-green)]">Skillset</span>
         </h3>
         <p>
           During my professional and personal experience I have come across
@@ -101,9 +81,13 @@ export default function About() {
               <li
                 title={skill.title}
                 key={index}
-                className="cursor-pointer my-4 text-7xl flex items-center justify-center py-10 px-14  border-[2px] rounded-md hover:scale-105 transition-transform duration-500 ease-in-out"
+                className="border-[var(--color-medium-green)] cursor-pointer my-4 text-7xl flex items-center justify-center py-10 px-14  border-[2px] rounded-md hover:scale-105 transition-transform duration-500 ease-in-out"
               >
-                {skill.icon({ title: skill.title })}
+                {skill.icon({
+                  title: skill.title,
+
+                  // color: "var(--color-green)",
+                })}
               </li>
             )
           )}
@@ -111,17 +95,17 @@ export default function About() {
       </div>
       <div className="flex flex-col items-center gap-[2rem] mt-16 mb-20">
         <h3 className="sm:text-3xl text-center text-lg">
-          <span className="text-[var(--link-color)]">Technologies </span>
+          <span className="text-[var(--color-green)]">Technologies </span>
           Used
         </h3>
-        <p></p>
+        <p>Tools I have used along my coding journey.</p>
         <ul className="flex flex-wrap gap-[2rem] justify-evenly">
           {techs.map(
             (tech: { title: string; icon: IconType }, index: number) => (
               <li
                 title={tech.title}
                 key={index}
-                className="cursor-pointer my-4 text-7xl flex items-center justify-center py-10 px-14  border-[2px] rounded-md hover:scale-105 transition-transform duration-500 ease-in-out"
+                className="border-[var(--color-medium-green)] cursor-pointer my-4 text-7xl flex items-center justify-center py-10 px-14  border-[2px] rounded-md hover:scale-105 transition-transform duration-500 ease-in-out"
               >
                 {tech.icon({ title: tech.title })}
               </li>

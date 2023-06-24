@@ -24,8 +24,10 @@ export default function Projects() {
       {
         title: "Silent Reads",
         img: "/project-images/silentreads.png",
-        description: "Pure Vanilla JS book search website",
+        description:
+          "A book search engine, made with vanillas javascript using google search apis.",
         techs: ["HTML", "CSS", "JS", "API", "Firebase"],
+        link: "https://silentreads.web.app/",
       },
       {
         title: "Yahtzee",
@@ -33,56 +35,64 @@ export default function Projects() {
         description: "Yahtzee Game.",
         techs: ["React", "Firebase"],
         link: "https://myyahtzee.web.app/",
+        github_link: "https://github.com/rayhaddad717/reactCourse.git",
       },
       {
         title: "Lights Out",
         img: "/project-images/lightsout.png",
-        description: "Simple and fun game.",
+        description:
+          "Simple and fun game where the objective is to turn off all the lights.",
         techs: ["React", "Firebase"],
         link: "https://mylightsout.web.app/",
+        github_link: "https://github.com/rayhaddad717/reactCourse.git",
       },
       {
         title: "Dad Jokes",
         img: "/project-images/cheezjokes.png",
-        description: "Funny joke generator.",
+        description:
+          "Generates jokes which are considered funny by people and cheesy by others :)",
         techs: ["React", "Firebase"],
         link: "https://cheezjokes.web.app/",
+        github_link: "https://github.com/rayhaddad717/reactCourse.git",
       },
       {
         title: "High Low",
         img: "/project-images/highlow.png",
-        description: "Card game.",
+        description: "Typical High-Low card game.",
         techs: ["React", "Firebase"],
         link: "https://myhighlow.web.app/",
+        github_link: "https://github.com/rayhaddad717/reactCourse.git",
       },
       {
         title: "Game Library",
         img: "/project-images/videogames.png",
-        description: "Game library built with external APIs.",
+        description: "Game library search engine built with external APIs.",
         techs: ["Angular", "API", "Firebase"],
         link: "https://raysvideogamelibrary.web.app/",
       },
 
       {
-        title: "Ecom",
-        img: "/icons/code-solid.svg",
-        description: "Ecommerce Website",
-      },
-      {
-        title: "Wine Predictor",
-        img: "/icons/code-solid.svg",
-        description: "NODEJS",
+        title: "Wine Quality Predictor",
+        img: "/project-images/WinePredictor.jpeg",
+        description:
+          "Mobile App to predict the quality of a wine sample. Uses machine learning with python backend to predict the quality of a sample",
+        github_link:
+          "https://github.com/rayhaddad717/ml-wine-prediction-mobile.git",
       },
 
       {
         title: "Deliveroo Clone",
-        img: "/icons/code-solid.svg",
-        description: "NODEJS",
+        img: "/project-images/deliveroo.jpeg",
+        description:
+          "Deliveroo mobile app clone built with React Native and Expo with Sanity as a CMS.",
+        github_link: "https://github.com/rayhaddad717/Deliveroo-clone.git",
       },
       {
         title: "Signal Clone",
         img: "/icons/code-solid.svg",
-        description: "NODEJS",
+        description:
+          "Signal mobile app clone built with React Native, Expo, with Firebase authentication and messaging.",
+        github_link: "https://github.com/rayhaddad717/Signal.git",
       },
     ],
     []
@@ -106,10 +116,10 @@ export default function Projects() {
   );
   // return <ProjectsList projects={projects} />;
   return (
-    <section className="mt-5">
+    <section className="sm:mt-5 mt-10 px-[var(--page-padding)]">
       <div>
         <h1 className="text-4xl text-center mb-5 text-[var(--link-color)]">
-          Projects
+          My <p className="text-[var(--text-primary)] inline">Projects</p>
         </h1>
         <h4 className="text-center text-[var(--text-color)]">
           Some of my projects
@@ -118,13 +128,13 @@ export default function Projects() {
           {projects.map((project, index) => (
             <li
               key={index}
-              className="flex-grow-0 sm:basis-[400px] border-[2px]  border-[var(--border-color)] sm:hover:-translate-x-1 sm:hover:-translate-y-1 duration-100 ease-in-out flex flex-col items-center justify-center  rounded-md overflow-hidden"
+              className="sm:mx-0 mx-[2rem] flex-grow-0 sm:basis-[400px] border-[2px]  border-[var(--color-green)] sm:hover:-translate-x-1 sm:hover:-translate-y-1 duration-100 ease-in-out flex flex-col items-center justify-center  rounded-md overflow-hidden"
             >
               <div className="border-0 card flex-[2] relative mb-4">
                 <div className="  hover:rgb(46 46 46 / 50%) w-full h-full absolute  flex-wrap top-0 left-0 justify-center items-center gap-2 hidden tech-chip">
                   {project.techs?.map((tech, tech_index) => (
                     <span
-                      className="rounded-r-lg rounded-l-lg bg-[var(--text-color)] w-fit h-fit p-1 cursor-pointer text-black "
+                      className="rounded-r-lg rounded-l-lg bg-[var(--color-white)] w-fit h-fit p-1 cursor-pointer text-black "
                       key={tech_index}
                     >
                       {tech}
@@ -132,7 +142,7 @@ export default function Projects() {
                   ))}
                 </div>
                 <img
-                  className=" object-contain   transition-transform duration-500 ease-in-out"
+                  className=" object-contain max-h-[180px]   transition-transform duration-500 ease-in-out"
                   src={project.img}
                   alt={project.title}
                 />
@@ -145,31 +155,35 @@ export default function Projects() {
                   {project.description}
                 </p>
                 <div className="flex items-center justify-center gap-3 my-2">
-                  <Link
-                    href={project.github_link || "#"}
-                    className="hover:-translate-y-1 transition-all ease-in-out duration-200 "
-                  >
-                    <img
-                      className="w-[24px] cursor-pointer "
-                      src="/icons/github.svg"
-                    />
-                  </Link>
-                  <Link
-                    href={project.link || "#"}
-                    className="hover:-translate-y-1 transition-all ease-in-out duration-200 "
-                  >
-                    <img
-                      className="w-[24px] cursor-pointer"
-                      src="/icons/link-solid.svg"
-                    />
-                  </Link>
+                  {project.github_link ? (
+                    <Link
+                      href={project.github_link || "#"}
+                      className="hover:-translate-y-1 transition-all ease-in-out duration-200 "
+                    >
+                      <img
+                        className="w-[24px] cursor-pointer  img-filter"
+                        src="/icons/github.svg"
+                      />
+                    </Link>
+                  ) : null}
+                  {project.link ? (
+                    <Link
+                      href={project.link || "#"}
+                      className="hover:-translate-y-1 transition-all ease-in-out duration-200 "
+                    >
+                      <img
+                        className="w-[24px] cursor-pointer img-filter"
+                        src="/icons/link-solid.svg"
+                      />
+                    </Link>
+                  ) : null}
                 </div>
               </div>
             </li>
           ))}
         </ul>
       </div>
-      <div>
+      {/* <div>
         <h1 className="text-4xl text-center mb-5">Courses</h1>
         <h4 className="text-center text-gray-500">
           Some of my completed courses
@@ -198,12 +212,12 @@ export default function Projects() {
                 <p className="text-gray-600 mb-5">{course.description}</p>
                 <div className="flex items-center gap-3 my-2">
                   <img
-                    className="w-[24px] cursor-pointer"
+                    className="w-[24px] cursor-pointer img-filter"
                     src="/icons/github.svg"
                   />
                   <Link href={course.link}>
                     <img
-                      className="w-[24px] cursor-pointer"
+                      className="w-[24px] cursor-pointer img-filter"
                       src="/icons/link-solid.svg"
                     />
                   </Link>
@@ -212,7 +226,7 @@ export default function Projects() {
             )
           )}
         </ul>
-      </div>
+      </div> */}
     </section>
   );
 }

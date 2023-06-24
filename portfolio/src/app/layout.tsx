@@ -103,7 +103,7 @@ export default function RootLayout({
       <meta property="og:title" content="Ray Haddad" />
       <meta property="og:description" content="Full Stack Developer" />
       <meta property="og:url" content="rayhaddad.xyz" />
-      <meta name="theme-color" content="#070707" />
+      <meta name="theme-color" content="#0db760" />
       <meta
         name="google-site-verification"
         content="6wLNrLsUxaQfuiwLTzD2q5QcwE9U13Fq0MeLzahIr94"
@@ -133,6 +133,7 @@ export default function RootLayout({
               width: bubble.width,
               height: bubble.height,
               background: bubble.color,
+              zIndex: -1,
             }}
           ></div>
         ))}

@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import Link from "next/link";
 
 export default function AboutMe() {
@@ -10,22 +11,26 @@ export default function AboutMe() {
           </h4>
           <h1 className="text-[50px] text-[var(--color-light-black)] sm:leading-[70px] leading-[53px] font-semibold">
             I have{" "}
-            <span className="text-[var(--text-primary)]">Creative Design</span>{" "}
-            Experience
+            <span className="text-[var(--text-primary)]">Full Stack</span>{" "}
+            Development Experience
           </h1>
           <p className="text-[var(--color-gray)] text-[1rem]">
-            I&apos;m Ray, a creative Product Designer. I&apos;ve been helping
-            businesses to solve their problems with my design for 2 years.
+            I&apos;m Ray, a self-taught Full Stack developer. I&apos;ve been
+            helping businesses to solve their problems with my engineering for
+            around 2 years.
           </p>
           <div className="flex gap-[1.5rem]">
-            <a
+            {/* <a
               href="#contactme"
               className="rounded-lg bg-[var(--color-green)] text-[var(--color-white)] px-[24px] py-[16px]"
             >
               Contact Me
+            </a> */}
+            <a href="#contactme">
+              <Button title="Contact Me" />
             </a>
-            <a className="flex items-center font-medium">
-              View Portfolio{" "}
+            <a className="flex items-center font-medium" href="#portfolio">
+              View Portfolio
               <img
                 className="ml-[8px] inline cursor-pointer"
                 src="svgs/arow_up_left.svg"
@@ -73,16 +78,16 @@ export default function AboutMe() {
       <ul className="lower my-16 flex justify-evenly w-full sm:gap-0 gap-[1rem]">
         <li className="flex flex-col justify-between ">
           <h2 className="text-[var(--text-primary)] text-[23px] sm:text-[48px] font-semibold font-pop poppins">
-            80+
+            20+
           </h2>
           <p className="poppins text-[15px] sm:text-[28px] text-[var(--color-black)]">
-            Satisfied clients
+            Technologies
           </p>
         </li>
         <li className="w-[2px] h-[80px] mt-auto bg-[var(--color-green)]"></li>
         <li className="flex flex-col justify-between ">
           <h2 className="text-[var(--text-primary)] text-[23px] sm:text-[48px] font-semibold font-pop poppins">
-            200+
+            10+
           </h2>
           <p className="poppins text-[15px] sm:text-[28px] text-[var(--color-black)]">
             Projects completed
@@ -91,10 +96,10 @@ export default function AboutMe() {
         <li className="w-[2px] h-[80px] mt-auto bg-[var(--color-green)]"></li>
         <li className="flex flex-col justify-between ">
           <h2 className="text-[var(--text-primary)] text-[23px] sm:text-[48px] font-semibold font-pop poppins">
-            99+
+            2+
           </h2>
           <p className="poppins text-[15px] sm:text-[28px] text-[var(--color-black)]">
-            Reviews given
+            Years of experience
           </p>
         </li>
       </ul>

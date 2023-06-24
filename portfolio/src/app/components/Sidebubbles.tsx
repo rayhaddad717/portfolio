@@ -1,4 +1,6 @@
-export default function SideBubbles({ state }: { state: 1 | 2 | 3 | 4 }) {
+export default function SideBubbles(
+  { state }: { state: 1 | 2 | 3 | 4 } = { state: 1 }
+) {
   const states = [
     [
       "red",
@@ -64,7 +66,40 @@ export default function SideBubbles({ state }: { state: 1 | 2 | 3 | 4 }) {
       "green",
       "green",
     ],
+    [
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "red",
+      "red",
+      "green",
+      "red",
+      "red",
+      "green",
+      "red",
+      "red",
+      "green",
+      "red",
+      "red",
+      "green",
+      "red",
+      "red",
+      "green",
+    ],
   ];
+  const index = state ? state - 1 : 0;
   return (
     <ul
       className="grid grid-cols-3 w-fit gap-[4px] mt-[2rem]"
@@ -73,7 +108,7 @@ export default function SideBubbles({ state }: { state: 1 | 2 | 3 | 4 }) {
         marginRight: state % 2 === 0 ? "auto" : "3px",
       }}
     >
-      {states[0].map((bubble, index) => (
+      {states[index].map((bubble, index) => (
         <li
           key={index}
           className="h-[8px] w-[8px] rounded-full"
