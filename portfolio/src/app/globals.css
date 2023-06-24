@@ -1,85 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --palette-c1: #363753;
-  --palette-c2: #dfe3ee;
-  --palette-c3: #fefefe;
-  --palette-c4: #5cd2c6;
+  --background-color: #fff;
+  --text-primary: #0db760;
+  --text-secondary: #92929d;
+  --text-base: #11142d;
+  --color-green: #0db760;
+  --color-red: #ff0000;
+  --color-black: #000000;
+  --color-pink: #fe8b75;
+  --color-blue: #0047ff;
+  --color-gray: #323433;
+  --color-light-gray: #c4c4c4;
+  --color-light-gray-2: #bec0bf;
+  --color-light-black: #0b0c0c;
+  --color-light-green: #24ff00;
+  --color-light-yellow: #f9f047;
+  --color-medium-green: #2abf74;
+  --color-dark-gray: #4d4d4d;
+  --color-dark-white: #e8eaf4;
+  --color-light-blue: #e9f8f5;
+  --color-light-pink: #fff4e1;
 
-  --page-background-color: #111827;
-  --text-color: white;
-  --link-color: #81cfe0;
-  --scrollbar-color: #81cfe0;
-  --border-color: #81cfe0;
-  --nav-underline-color: #81cfe0;
-  --footer-link-color: #81cfe0;
-  --footer-background-color: #81cfe020;
-  --header-h1-gradient: linear-gradient(
-    to left,
-    rgb(80, 201, 195),
-    rgb(150, 222, 218)
-  );
-  --frontpage-post-hover-color: rgba(228, 241, 254, 0.4);
+  --color-white: #fff;
+  --page-padding: 10%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
 }
-
+.writing-mode-vertical-lr {
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+}
+.poppins {
+  font-family: Poppins, Inter;
+}
+html {
+  display: flex;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 body {
-  /* color: rgb(var(--foreground-rgb)); */
-  color: #fff;
-  background: var(--page-background-color);
-  padding: 0 1rem;
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
-  /* For Firefox */
-  scrollbar-color: #000000 #f1f1f1; /* Black color for thumb, light gray for track */
-  scrollbar-width: thin;
+  width: 100%;
+  overflow-x: hidden;
 }
-body.light {
-  --link-color: #2574a9;
-  --text-color: black;
-  --page-background-color: white;
-  --nav-underline-color: #663399;
-  --border-color: black;
-  --footer-link-color: #663399;
-  --footer-background-color: #66339906;
-  --header-h1-gradient: linear-gradient(
-    to right,
-    rgb(157, 80, 187),
-    rgb(110, 72, 170)
-  );
-  --frontpage-post-hover-color: rgb(237, 233, 254);
-}
+
 /* For Webkit browsers (Chrome, Safari, etc.) */
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 6px;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbar-color); /* Black color */
+  background-color: var(--color-green); /* Black color */
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-track {
   /* background-color: #f1f1f1; Light gray color */
-  background-color: var(--page-background-color); /* Light gray color */
+  background-color: var(--color-gray); /* Light gray color */
   border-radius: 5px;
-}
-* {
-  box-sizing: border-box;
 }

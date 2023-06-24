@@ -1,0 +1,103 @@
+import Link from "next/link";
+
+export default function AboutMe() {
+  return (
+    <div className="mt-[9rem] px-[var(--page-padding)] flex flex-col gap-[4rem]">
+      <div className="upper flex justify-between relative sm:flex-row flex-col sm:gap-0 gap-[2rem]">
+        <div className="left flex flex-col gap-[1rem] sm:w-[50%] w-[90%]">
+          <h4 className="w-fit px-[5px] text-[var(--text-primary)] border-[var(--color-green)] border-[1px] rounded-3xl font-medium text-[20px]">
+            Welcome
+          </h4>
+          <h1 className="text-[50px] text-[var(--color-light-black)] sm:leading-[70px] leading-[53px] font-semibold">
+            I have{" "}
+            <span className="text-[var(--text-primary)]">Creative Design</span>{" "}
+            Experience
+          </h1>
+          <p className="text-[var(--color-gray)] text-[1rem]">
+            I&apos;m Ray, a creative Product Designer. I&apos;ve been helping
+            businesses to solve their problems with my design for 2 years.
+          </p>
+          <div className="flex gap-[1.5rem]">
+            <a
+              href="#contactme"
+              className="rounded-lg bg-[var(--color-green)] text-[var(--color-white)] px-[24px] py-[16px]"
+            >
+              Contact Me
+            </a>
+            <a className="flex items-center font-medium">
+              View Portfolio{" "}
+              <img
+                className="ml-[8px] inline cursor-pointer"
+                src="svgs/arow_up_left.svg"
+                alt="portfolio"
+              />
+            </a>
+          </div>
+        </div>
+        <div className="right relative">
+          <div className="rounded-md sm:h-[350px] h-[80vw] sm:w-[350px] w-[80vw] bg-[var(--color-green)] relative">
+            <img
+              src="images/me.png"
+              className="sm:w-[80%] w-[70vw]  absolute sm:left-[10%] left-[18px] bottom-0 z-20"
+            />
+          </div>
+          <div className="rounded-md absolute border-[4px] border-[var(--color-black)] sm:h-[350px] h-[80vw] sm:w-[350px] w-[80vw] left-[10%] top-[10%] z-10 sm:top-[52px] sm:left-[-52px]"></div>
+        </div>
+
+        <div className="extreme-right absolute right-[-7%] flex flex-col gap-[32px] items-center">
+          <p className="text-[var(--color-green)] writing-mode-vertical-lr font-medium">
+            Follow me on :
+          </p>
+          <div className="w-[1px] h-[80px] bg-[var(--color-green)]"></div>
+          <img
+            className="w-[20px] h-[20px]"
+            src="svgs/facebook.svg"
+            alt="facebook"
+          />
+          <Link href="https://www.instagram.com/rayhaddad11">
+            <img
+              className="w-[20px] h-[20px]"
+              src="svgs/instagram.svg"
+              alt="instragram"
+            />
+          </Link>
+          <Link href="https://www.linkedin.com/in/ray-haddad/">
+            <img
+              className="w-[20px] h-[20px]"
+              src="svgs/linkedin.svg"
+              alt="linkedin"
+            />
+          </Link>
+        </div>
+      </div>
+      <ul className="lower my-16 flex justify-evenly w-full sm:gap-0 gap-[1rem]">
+        <li className="flex flex-col justify-between ">
+          <h2 className="text-[var(--text-primary)] text-[23px] sm:text-[48px] font-semibold font-pop poppins">
+            80+
+          </h2>
+          <p className="poppins text-[15px] sm:text-[28px] text-[var(--color-black)]">
+            Satisfied clients
+          </p>
+        </li>
+        <li className="w-[2px] h-[80px] mt-auto bg-[var(--color-green)]"></li>
+        <li className="flex flex-col justify-between ">
+          <h2 className="text-[var(--text-primary)] text-[23px] sm:text-[48px] font-semibold font-pop poppins">
+            200+
+          </h2>
+          <p className="poppins text-[15px] sm:text-[28px] text-[var(--color-black)]">
+            Projects completed
+          </p>
+        </li>
+        <li className="w-[2px] h-[80px] mt-auto bg-[var(--color-green)]"></li>
+        <li className="flex flex-col justify-between ">
+          <h2 className="text-[var(--text-primary)] text-[23px] sm:text-[48px] font-semibold font-pop poppins">
+            99+
+          </h2>
+          <p className="poppins text-[15px] sm:text-[28px] text-[var(--color-black)]">
+            Reviews given
+          </p>
+        </li>
+      </ul>
+    </div>
+  );
+}

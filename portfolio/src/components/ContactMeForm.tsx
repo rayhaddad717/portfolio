@@ -3,7 +3,7 @@
 import { useState } from "react";
 import "./ContactMe.css";
 import axios from "axios";
-export default function ContactMe() {
+export default function ContactMeForm() {
   const [state, setState] = useState("finished");
   const [errors, setErrors] = useState<string[]>([]);
   const [form, setForm] = useState<{ [key: string]: string }>({
@@ -56,22 +56,14 @@ export default function ContactMe() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col justify-center gap-[2rem] w-full mr-auto ml-auto my-[6rem] max-w-[100%]"
+      className="flex flex-col justify-center gap-[2rem] w-full mr-auto ml-auto max-w-[100%]"
     >
-      <h1 className="text-center text-4xl">Contact Me</h1>
-      <p className="text-gray-400 mr-auto ml-auto">
-        Let&apos;s get this conversation started. Send me a message and we can
-        get in touch as soon as possible!
-      </p>
       <div className="flex sm:flex-row flex-col sm:gap-[20%] gap-8  justify-between ">
-        <div className="sm:w-[40%] flex-grow flex flex-col gap-[0.5rem]">
-          <label htmlFor="firstName">
-            First name <span className="text-[#ff0000]  text-sm">*</span>
-          </label>
+        <div className="flex-grow flex flex-col gap-[0.5rem]">
           <input
             value={form.fn}
             onChange={(e) => handleChange(e.target.value, "fn")}
-            className=" text-black sm:h-[3.5rem]  h-[2.5rem] p-[0.5rem] rounded-sm border-[#fff] focus:border-[var(--border-color)] border-[3px] outline-none"
+            className=" text-black sm:h-[3.5rem]  h-[2.5rem] p-[0.5rem]  border-[var(--color-light-gray-2)] focus:border-[var(--border-color)] border-[1px] rounded-lg outline-none"
             id="firstName"
             placeholder="First name"
           />
@@ -79,15 +71,12 @@ export default function ContactMe() {
             <p className="text-[#ff0000] ml-auto text-sm">Required</p>
           ) : null}
         </div>
-        <div className="sm:w-[40%] flex-grow flex flex-col gap-[0.5rem]">
-          <label htmlFor="lastName">
-            Last name <span className="text-[#ff0000]  text-sm">*</span>
-          </label>
+        <div className="flex-grow flex flex-col gap-[0.5rem]">
           <input
             value={form.ln}
             onChange={(e) => handleChange(e.target.value, "ln")}
             id="lastName"
-            className=" text-black sm:h-[3.5rem] h-[2.5rem] p-[0.5rem] rounded-sm border-[#fff] focus:border-[var(--border-color)] border-[3px] outline-none"
+            className=" text-black sm:h-[3.5rem] h-[2.5rem] p-[0.5rem]  border-[var(--color-light-gray-2)] focus:border-[var(--border-color)] border-[1px] rounded-lg outline-none"
             placeholder="Last name"
           />
           {errors.filter((e) => e == "ln")?.length ? (
@@ -96,14 +85,11 @@ export default function ContactMe() {
         </div>
       </div>
       <div className="flex flex-col gap-[0.5rem]  justify-center ">
-        <label htmlFor="workEmail">
-          Work email <span className="text-[#ff0000]  text-sm">*</span>
-        </label>
         <input
           value={form.email}
           onChange={(e) => handleChange(e.target.value, "email")}
           id="workEmail"
-          className="text-black sm:h-[3.5rem] h-[2.5rem] p-[0.5rem] rounded-sm border-[#fff] focus:border-[var(--border-color)] border-[3px] outline-none"
+          className="text-black sm:h-[3.5rem] h-[2.5rem] p-[0.5rem]  border-[var(--color-light-gray-2)] focus:border-[var(--border-color)] border-[1px] rounded-lg outline-none"
           placeholder="Work email"
         />
         {errors.filter((e) => e == "email")?.length ? (
@@ -111,15 +97,12 @@ export default function ContactMe() {
         ) : null}
       </div>
       <div className="flex flex-col gap-[0.5rem]  justify-center ">
-        <label htmlFor="message">
-          Message <span className="text-[#ff0000]  text-sm">*</span>
-        </label>
         <textarea
           value={form.message}
           id="message"
           placeholder="Message"
           onChange={(e) => handleChange(e.target.value, "message")}
-          className="resize-none text-black h-[10rem] p-[0.5rem] rounded-sm border-[#fff] focus:border-[var(--border-color)] border-[3px] outline-none"
+          className="resize-none text-black h-[10rem] p-[0.5rem]  border-[var(--color-light-gray-2)] focus:border-[var(--border-color)] border-[1px] rounded-lg outline-none"
         ></textarea>
         {errors.filter((e) => e == "message")?.length ? (
           <p className="text-[#ff0000] ml-auto text-sm">Required</p>
@@ -127,7 +110,7 @@ export default function ContactMe() {
       </div>
       <div className="ml-auto">
         <button className={`expand ${state}`} type="submit">
-          Submit
+          Submit Message
           <span className="expand-icon expand-hover">
             <svg
               className="first"

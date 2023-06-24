@@ -2,13 +2,37 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="sm:flex sm:justify-between sm:flex-row h-[50px] sm:items-center flex-col gap-5 items-start">
-      <h3>Designed and Developed by Ray Haddad</h3>
-      <h3>Copyright © 2023</h3>
-      <ul className="sm:flex-row sm:justify-between sm:gap-5 gap-1 flex flex-col items-start">
-        <Link href="https://github.com/rayhaddad717">Github</Link>
-        <Link href="https://www.instagram.com/rayhaddad11">Instagram</Link>
-        <Link href="https://www.linkedin.com/in/ray-haddad/">LinkedIn</Link>
+    <footer className="mt-[9rem] border-t-[1px] border-[var(--color-light-gray-2)] mx-[var(--page-padding)] py-[40px] flex sm:justify-between sm:flex-row  sm:items-center flex-col sm:gap-5 gap-[2rem] items-start">
+      <p className="text-[var(--color-black)] text-[16px] ">
+        © 2022. All Rights Reserved
+      </p>
+      <p className="text-[var(--color-black)] text-[16px] ">
+        Designed by Tanvir Ahmed
+      </p>
+      <ul className="sm:justify-between sm:gap-5 gap-[1rem] sm:w-fit w-[100%] flex  items-start">
+        <Link href="https://github.com/rayhaddad717">
+          <img
+            className="sm:w-[20px] w-[40px] sm:h-[20px] h-[40px]"
+            src="svgs/facebook.svg"
+            alt="facebook"
+          />
+        </Link>
+        <Link href="https://www.instagram.com/rayhaddad11">
+          {" "}
+          <img
+            className="sm:w-[20px] w-[40px] sm:h-[20px] h-[40px]"
+            src="svgs/instagram.svg"
+            alt="instragram"
+          />
+        </Link>
+        <Link href="https://www.linkedin.com/in/ray-haddad/">
+          {" "}
+          <img
+            className="sm:w-[20px] w-[40px] sm:h-[20px] h-[40px]"
+            src="svgs/linkedin.svg"
+            alt="linkedin"
+          />
+        </Link>
       </ul>
     </footer>
   );
