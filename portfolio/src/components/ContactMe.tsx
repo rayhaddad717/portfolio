@@ -71,7 +71,7 @@ export default function ContactMe() {
           <input
             value={form.fn}
             onChange={(e) => handleChange(e.target.value, "fn")}
-            className=" text-black sm:h-[3.5rem] sm:h-[3.5rem] h-[2.5rem] p-[0.5rem] rounded-sm border-[#fff] focus:border-[var(--border-color)] border-[3px] outline-none"
+            className=" text-black sm:h-[3.5rem]  h-[2.5rem] p-[0.5rem] rounded-sm border-[#fff] focus:border-[var(--border-color)] border-[3px] outline-none"
             id="firstName"
             placeholder="First name"
           />

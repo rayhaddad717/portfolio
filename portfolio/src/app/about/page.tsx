@@ -77,20 +77,31 @@ export default function About() {
             Hello There, I am Ray Haddad. I am currently a software engineering
             student in my 4th year.
           </p>
-          <p>Additionally, I work as a Full Stack Web Developer in Dbaye.</p>
+          <p>
+            I am extremely passionate about everything related to coding. I do a
+            lot of self-learn and passion projects to push my limits.
+          </p>
+          <p>
+            During my free time I like to listen to music, go on long, calming
+            walks in nature, and go out with friends.
+          </p>
         </div>
       </div>
       <div className="flex flex-col items-center gap-[2rem] my-10 w-[80%] mx-[auto]">
         <h3 className="sm:text-3xl text-center text-lg">
           Profesional <span className="text-[var(--link-color)]">Skillset</span>
         </h3>
+        <p>
+          During my professional and personal experience I have come across
+          different technologies with which I am now comfortable using.
+        </p>
         <ul className="flex flex-wrap gap-[2rem] justify-evenly">
           {skills.map(
             (skill: { title: string; icon: IconType }, index: number) => (
               <li
                 title={skill.title}
                 key={index}
-                className="cursor-pointer my-4 text-7xl flex items-center justify-center py-10 px-14  border-[2px] rounded-md hover:scale-110 transition-transform duration-500 ease-in-out"
+                className="cursor-pointer my-4 text-7xl flex items-center justify-center py-10 px-14  border-[2px] rounded-md hover:scale-105 transition-transform duration-500 ease-in-out"
               >
                 {skill.icon({ title: skill.title })}
               </li>
@@ -103,13 +114,14 @@ export default function About() {
           <span className="text-[var(--link-color)]">Technologies </span>
           Used
         </h3>
+        <p></p>
         <ul className="flex flex-wrap gap-[2rem] justify-evenly">
           {techs.map(
             (tech: { title: string; icon: IconType }, index: number) => (
               <li
                 title={tech.title}
                 key={index}
-                className="cursor-pointer my-4 text-7xl flex items-center justify-center py-10 px-14  border-[2px] rounded-md hover:scale-110 transition-transform duration-500 ease-in-out"
+                className="cursor-pointer my-4 text-7xl flex items-center justify-center py-10 px-14  border-[2px] rounded-md hover:scale-105 transition-transform duration-500 ease-in-out"
               >
                 {tech.icon({ title: tech.title })}
               </li>

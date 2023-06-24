@@ -15,7 +15,8 @@ export default function Projects() {
       {
         title: "Yelpcamp",
         img: "/project-images/yelpcamp.png",
-        description: "Website that has campgrounds",
+        description:
+          "First FullStack project. Serves as a platform to view campgrounds across the country, add new campgrounds, review others. ",
         techs: ["Express", "NodeJS", "HTML", "CSS"],
         link: "https://yelpcamp.rayhaddad.xyz",
         github_link: "https://github.com/rayhaddad717/yelpcamp",
@@ -23,41 +24,41 @@ export default function Projects() {
       {
         title: "Silent Reads",
         img: "/project-images/silentreads.png",
-        description: "NODEJS",
+        description: "Pure Vanilla JS book search website",
         techs: ["HTML", "CSS", "JS", "API", "Firebase"],
       },
       {
         title: "Yahtzee",
         img: "/project-images/yahtzee.png",
-        description: "NODEJS",
+        description: "Yahtzee Game.",
         techs: ["React", "Firebase"],
         link: "https://myyahtzee.web.app/",
       },
       {
         title: "Lights Out",
         img: "/project-images/lightsout.png",
-        description: "NODEJS",
+        description: "Simple and fun game.",
         techs: ["React", "Firebase"],
         link: "https://mylightsout.web.app/",
       },
       {
         title: "Dad Jokes",
         img: "/project-images/cheezjokes.png",
-        description: "NODEJS",
+        description: "Funny joke generator.",
         techs: ["React", "Firebase"],
         link: "https://cheezjokes.web.app/",
       },
       {
         title: "High Low",
         img: "/project-images/highlow.png",
-        description: "NODEJS",
+        description: "Card game.",
         techs: ["React", "Firebase"],
         link: "https://myhighlow.web.app/",
       },
       {
         title: "Game Library",
         img: "/project-images/videogames.png",
-        description: "NODEJS",
+        description: "Game library built with external APIs.",
         techs: ["Angular", "API", "Firebase"],
         link: "https://raysvideogamelibrary.web.app/",
       },
@@ -110,12 +111,14 @@ export default function Projects() {
         <h1 className="text-4xl text-center mb-5 text-[var(--link-color)]">
           Projects
         </h1>
-        <h4 className="text-center text-gray-500">Some of my projects</h4>
+        <h4 className="text-center text-[var(--text-color)]">
+          Some of my projects
+        </h4>
         <ul className="py-10 w-[100%] flex justify-center gap-8 sm:flex-row flex-col flex-wrap">
           {projects.map((project, index) => (
             <li
               key={index}
-              className="flex-grow-0 basis-[400px] border-1  border-gray-400 flex flex-col items-center justify-center  rounded-md overflow-hidden"
+              className="flex-grow-0 sm:basis-[400px] border-[2px]  border-[var(--border-color)] sm:hover:-translate-x-1 sm:hover:-translate-y-1 duration-100 ease-in-out flex flex-col items-center justify-center  rounded-md overflow-hidden"
             >
               <div className="border-0 card flex-[2] relative mb-4">
                 <div className="  hover:rgb(46 46 46 / 50%) w-full h-full absolute  flex-wrap top-0 left-0 justify-center items-center gap-2 hidden tech-chip">
@@ -138,7 +141,9 @@ export default function Projects() {
                 <h4 className="text-xl font-bold mb-4 text-start text-[var(--link-color)]">
                   {project.title}
                 </h4>
-                <p className="text-gray-600 mb-5">{project.description}</p>
+                <p className="text-[var(--text-color)] mb-5">
+                  {project.description}
+                </p>
                 <div className="flex items-center justify-center gap-3 my-2">
                   <Link
                     href={project.github_link || "#"}
