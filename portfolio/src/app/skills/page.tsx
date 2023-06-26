@@ -74,7 +74,7 @@ export default function About() {
     <section>
       <div className="flex flex-col items-center gap-[2rem] sm:my-10 my-16 px-[var(--page-padding)] w-full mx-[auto]">
         <h3 className="text-3xl text-center ">
-          Profesional{" "}
+          Proffesional{" "}
           <span className="text-[var(--color-green)]">Skillset</span>
         </h3>
         <p>
